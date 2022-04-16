@@ -1,0 +1,32 @@
+.card-info {
+    padding: 20px;
+    background-color: white;
+    height: 550px;
+    position: relative;
+   
+    transition: 0.5s;
+}
+.card-info:hover{
+    transform: translateY(-15px);
+    box-shadow: 3px 5px 19px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 3px 5px 19px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 5px 19px -5px rgba(0, 0, 0, 0.75);
+}
+.card-info img {
+    width: 100%;
+}
+
+.checkout-button {
+    padding: 13px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 18px;
+    background-color: #4F83C4;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,44 @@
+[
+    {
+        "title":"House wiring",
+        "desc" :"Good quality house wiring is most important for us. if you keep safe from current shock then hire me",
+        "price" : "55",
+        "image" : "./images/image1.jpg",
+        "id" : "1"
+    },
+    {
+        "title":"Outlet installation and repair",
+        "desc" :"Good quality house wiring is most important for us. if you keep safe from current shock then hire me",
+        "price" : "30",
+        "image" : "./images/image2.jpg",
+        "id" : "2"
+    },
+    {
+        "title":"Ceiling fan installation and repair",
+        "desc" :"Good quality house wiring is most important for us. if you keep safe from current shock then hire me",
+        "price" : "40",
+        "image" : "./images/image3.jpg",
+        "id" : "3"
+    },
+    {
+        "title":"Electrical safety inspections",
+        "desc" :"Good quality house wiring is most important for us. if you keep safe from current shock then hire me",
+        "price" : "60",
+        "image" : "./images/image4.jpg",
+        "id" : "4"
+    },
+    {
+        "title":"Exhaust fan installations",
+        "desc" :"Good quality house wiring is most important for us. if you keep safe from current shock then hire me",
+        "price" : "50",
+        "image" : "./images/image5.jpg",
+        "id" : "5"
+    },
+    {
+        "title":"The appliance is faulty",
+        "desc" :"Good quality house wiring is most important for us. if you keep safe from current shock then hire me",
+        "price" : "25",
+        "image" : "./images/image6.jpg",
+        "id" : "6"
+    }
+]
