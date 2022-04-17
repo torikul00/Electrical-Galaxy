@@ -11,11 +11,13 @@ import NotFound from './components/notFound/NotFound'
 import Footer from './components/Footer/Footer';
 import Checkout from './components/Checkout/Checkout';
 import RequireAuth from './components/RequireAuth/RequireAuth';
+import ForgotPassword from './components/ForgotPassword/ForgotPassword'
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
     <div >
-
+      <Toaster />
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -28,6 +30,7 @@ function App() {
             <Checkout />
           </RequireAuth>
         } />
+        <Route path='/resetPassword' element={<ForgotPassword />} />
         <Route path='/*' element={<NotFound />} />
       </Routes>
       <Footer />

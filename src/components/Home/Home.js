@@ -6,14 +6,14 @@ const Home = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
         fetch('data.json')
-        .then(res => res.json())
-        .then(data => setServices(data))
-    },[])
+            .then(res => res.json())
+            .then(data => setServices(data))
+    }, [])
 
     return (
         <div>
             <main>
-                
+
                 <div className="header-container">
                     <div>
                         <h1 className='header-title'>WELCOME TO MY <br /> ELECTRICAL GALAXY !</h1>
@@ -27,7 +27,7 @@ const Home = () => {
                 <h1 className='service-title'>My Services</h1>
                 <div className="services-container">
                     {
-                     services.map(service => <ServiceCard key={service.id} service= {service} /> )   
+                        services.map(service => <ServiceCard key={service.id} service={service} />)
                     }
                 </div>
 
