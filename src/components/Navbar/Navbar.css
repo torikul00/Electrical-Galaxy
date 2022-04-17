@@ -33,3 +33,21 @@ nav a {
     font-size: 17px;
     font-weight: 500;
 }
+
+@media only screen and (max-width: 600px) {
+    
+    nav{
+        padding: 0;
+    }
+    nav a {
+        margin: 0px 10px;
+    }
+    
+    .logo{
+        display: none;
+    }
+    
+    .login-button {
+      margin-right: 20px;
+    }
+}

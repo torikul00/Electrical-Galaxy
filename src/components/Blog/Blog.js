@@ -18,8 +18,9 @@ const Blog = () => {
             <div className="blog">
                 <h2>What other services does firebase provide other than authentication ?</h2>
                 <p>Firebase provide many services other authentication <br />
-                    Here is the list - <br />
-                    <ol>
+                    Here is the list - <br /> 
+                </p>
+                    <ul>
                         <li>Authentication</li>
                         <li>Real Time databse</li>
                         <li>Hosting</li>
@@ -28,9 +29,8 @@ const Blog = () => {
                         <li>Test lab</li>
                         <li>Storage</li>
                         <li>Crash Reporting</li>
-                    </ol>
-                
-                </p>
+                    </ul>
+               
             </div>
         </div>
     );

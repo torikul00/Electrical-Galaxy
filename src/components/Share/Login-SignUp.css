@@ -19,9 +19,6 @@ form{
     border-radius: 5px;
     padding: 15px 60px;
     transition: 0.5s;
-
-   
-
 }
 .inputs input:not([type=checkbox]) {
     width: 100%;
@@ -30,7 +27,6 @@ form{
     border: 1.5px solid #22577e;
     border-radius: 5px;
 }
-
 form label {
     display: block;
 }
@@ -141,4 +137,9 @@ form label {
     font-size: 40px;
     cursor: pointer;
 
+}
+@media only screen and (max-width: 600px){
+ form{
+     border: none;
+ }
 }
