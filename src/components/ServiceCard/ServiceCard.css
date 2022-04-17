@@ -1,9 +1,9 @@
 .card-info {
     padding: 20px;
     background-color: white;
-    height: 550px;
+    height: 520px;
     position: relative;
-   
+   border-radius: 5px;
     transition: 0.5s;
 }
 .card-info:hover{
@@ -13,9 +13,22 @@
     -moz-box-shadow: 3px 5px 19px -5px rgba(0, 0, 0, 0.75);
 }
 .card-info img {
-    width: 100%;
+    width: 80%;
 }
-
+.card-info h1 {
+    margin: 15px 0px;
+    cursor: default;
+    color: #4F83C4;
+    
+}
+.card-info p {
+    margin: 10px 0px;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.719);
+}
+.card-info h3 {
+    color: #4F83C4;
+}
 .checkout-button {
     padding: 13px;
     border-radius: 3px;

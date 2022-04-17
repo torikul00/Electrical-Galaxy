@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Login.css'
+import '../Share/Login-SignUp.css'
+import { FcGoogle } from 'react-icons/fc';
+import { BsGithub } from 'react-icons/bs';
+
+
 
 const Login = () => {
     return (
@@ -24,9 +28,8 @@ const Login = () => {
 
             </div>
             <div className="icons">
-                {/* <FcGoogle  className='google-icon' />
-                <BsFacebook  className='facebook-icon' />
-                <BsGithub  className='github-icon' /> */}
+                <FcGoogle  className='google-icon' />
+                <BsGithub  className='github-icon' />
             </div>
 
 

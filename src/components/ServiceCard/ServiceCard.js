@@ -9,7 +9,7 @@ const ServiceCard = ({ service }) => {
                 <img src={image} alt="" />
                 <h1>{title}</h1>
                 <p>{ desc}</p>
-                <h3> Price : $ {price}</h3>
+                <h3> Service Charge : $ {price}</h3>
                 <button className='checkout-button'>Checkout Service</button>
 
             </div>

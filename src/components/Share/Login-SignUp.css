@@ -6,13 +6,19 @@
     justify-content: center;
     margin-top: 50px;
 }
+form:hover{
+    transform: translateY(-15px);
+    box-shadow: 3px 5px 19px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 3px 5px 19px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 5px 19px -5px rgba(0, 0, 0, 0.75);
+}
 
 form{
     width: 400px;
     border: 1px solid #22577e;
     border-radius: 5px;
     padding: 15px 60px;
-  
+    transition: 0.5s;
 
    
 
@@ -45,7 +51,7 @@ form label {
 .button{
     padding: 10px 30px ;
     border: none;
-    background: linear-gradient(90deg, rgba(34,87,126,1) 0%, rgba(22,57,82,1) 47%);
+    background:#4F83C4;
     width: 100%;
     color: white;
     border: none;
@@ -97,4 +103,38 @@ form label {
     letter-spacing: 1px;
     cursor: pointer;
     font-size: 13px;
+}
+.horizontal{
+    display: flex;
+    align-items: center;
+
+}
+.horizontal p {
+    padding: 0px 10px;
+}
+.line{
+    width: 50%;
+    height: 1px;
+    background-color:#22577e ;
+}
+.icons{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+    padding: 15px 0px;
+}
+.google-icon{
+    font-size: 40px;
+    cursor: pointer;
+}
+.facebook-icon {
+    font-size: 40px;    
+    color: blue;
+    cursor: pointer;
+}
+.github-icon{
+    font-size: 40px;
+    cursor: pointer;
+
 }

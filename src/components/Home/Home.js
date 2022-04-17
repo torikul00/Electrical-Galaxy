@@ -17,7 +17,7 @@ const Home = () => {
                 <div className="header-container">
                     <div>
                         <h1 className='header-title'>WELCOME TO MY <br /> ELECTRICAL GALAXY !</h1>
-                        <p className='header-desc'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, <br /> obcaecati eius consequatur <br /> ea dolorum harum modi beatae laudantium omnis porro?</p>
+                        <p className='header-desc'>Live long and save electricity. Imagine your life without electricity. <br /> Save electricity, save money and save planet. <br /> Save today – Use tomorrow</p>
                         <button className='register-button'>REGISTER NOW</button>
                     </div>
                     <div>
