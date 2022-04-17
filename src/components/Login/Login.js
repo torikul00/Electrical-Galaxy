@@ -21,7 +21,7 @@ const Login = () => {
             setEmail({ value: email, error: '' })
         }
         else {
-            setEmail({ value: '', error: 'Email is invalid' })
+            setEmail({ value: '', error: 'Email is not valid' })
         }
 
     }
@@ -30,7 +30,7 @@ const Login = () => {
             setPassword({ value: password, error: '' })
         }
         else {
-            setPassword({ value: '', error: 'Password is Invalid' })
+            setPassword({ value: '', error: 'Password is not  valid' })
         }
     }
     const handleSignIn = (e) => {
@@ -46,7 +46,7 @@ const Login = () => {
 
                 })
                 .catch(() => {
-                    toast.error('Invalid email and password', { id: 'error5' })
+                    toast.error('Invalid email or password', { id: 'error5' })
                 })
         }
 
@@ -57,35 +57,38 @@ const Login = () => {
 
     return (
         <div className='form-container'>
-        <form >
-            <h1 className='form-title'>Please Login</h1>
-            <div className="inputs">
-                    <input onBlur={(e) => handleEmail(e.target.value)} type="email" placeholder='Email' name='email' />
+            <form onSubmit={handleSignIn}>
+                <h1 className='form-title'>Please Login</h1>
+                <div className="inputs">
                     {
                         email?.error && <small className='error-message'>{email.error}</small>
                     }
-                <input  type="password" placeholder='Password' name='password' /> <br />
-                <p onClick={()=>navigate('/resetPassword')} className='forgot-password'>Forgot Password ?</p>
-                <button type='submit' className='button'>Login</button>
-                <p className='signup-link'>New User ? <Link to="/signup">Sign Up </Link></p>
+                    <input onBlur={(e) => handleEmail(e.target.value)} type="email" placeholder='Email' name='email' />
+                    {
+                        password?.error && <small className='error-message'>{password.error}</small>
+                    }
+                    <input onBlur={(e) => handlePassword(e.target.value)} type="password" placeholder='Password' name='password' /> <br />
+                    <p onClick={() => navigate('/resetPassword')} className='forgot-password'>Forgot Password ?</p>
+                    <button type='submit' className='button'>Login</button>
+                    <p className='signup-link'>New User ? <Link to="/signup">Sign Up </Link></p>
 
-            </div>
+                </div>
 
-            <div className="horizontal">
-                <div className='line' />
-                <p>OR</p>
-                <div className='line' />
+                <div className="horizontal">
+                    <div className='line' />
+                    <p>OR</p>
+                    <div className='line' />
 
-            </div>
-            <div className="icons">
-                <FcGoogle onClick={signInGoogle}  className='google-icon' />
-                <BsGithub  onClick={signGithub} className='github-icon' />
-            </div>
+                </div>
+                <div className="icons">
+                    <FcGoogle onClick={signInGoogle} className='google-icon' />
+                    <BsGithub onClick={signGithub} className='github-icon' />
+                </div>
 
 
-        </form>
+            </form>
 
-    </div>
+        </div>
     );
 };
 
