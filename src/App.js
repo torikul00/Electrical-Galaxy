@@ -9,6 +9,7 @@ import Navbar from './components/Navbar/Navbar';
 import SignUp from './components/SignUp/SignUp';
 import NotFound from './components/notFound/NotFound'
 import Footer from './components/Footer/Footer';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='about' element={<About />} />
         <Route path='login' element={<Login />} />
         <Route path='signUp' element={<SignUp />} />
+        <Route path='/checkout' element={<Checkout />} />
         <Route path='/*' element={<NotFound />} />
       </Routes>
       <Footer />

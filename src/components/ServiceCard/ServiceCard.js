@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ServiceCard.css'
 
 const ServiceCard = ({ service }) => {
+    const navigate = useNavigate()
     const { title, image, desc, price } = service
     return (
         <div>
@@ -10,7 +12,7 @@ const ServiceCard = ({ service }) => {
                 <h1>{title}</h1>
                 <p>{ desc}</p>
                 <h3> Service Charge : $ {price}</h3>
-                <button className='checkout-button'>Checkout Service</button>
+                <button onClick={()=>navigate('/checkout')} className='checkout-button'>Checkout Service</button>
 
             </div>
 
