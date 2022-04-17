@@ -10,11 +10,11 @@ const ResetPassword = () => {
     const handleResetPassword = () => {
         if (/^\S+@\S+\.\S+$/.test(email)) {
             sendPasswordResetEmail(auth , email)
-            .then(() => toast.success('Sent reset email'))
-            .catch(() =>  toast.error('Please Check Your Email'))
+            .then(() => toast.success('Sent reset email',{id:'sentMail'}))
+            .catch(() =>  toast.error('Please Check Your Email',{id:'error7'}))
         }
         else {
-            toast.error('Please Check Your Email')
+            toast.error('Please Check Your Email',{id:'error6'})
         }
     }
     return (

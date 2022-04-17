@@ -98,7 +98,7 @@ const SignUp = () => {
                     </div>
                     <div className="icons">
                         <FcGoogle className='google-icon' onClick={signInGoogle} />
-                        <BsGithub onClick={signGithub} className='github-icon' />
+                        
                     </div>
                 </form>
 

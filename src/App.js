@@ -17,7 +17,10 @@ import { Toaster } from 'react-hot-toast';
 function App() {
   return (
     <div >
-      <Toaster />
+      <Toaster
+       position="bottom-right"
+        reverseOrder={false}
+      />
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />

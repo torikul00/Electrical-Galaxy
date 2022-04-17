@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import '../Share/Login-SignUp.css'
 import { FcGoogle } from 'react-icons/fc';
 import { BsGithub } from 'react-icons/bs';
@@ -15,7 +15,9 @@ const Login = () => {
     const navigate = useNavigate()
     const [email, setEmail] = useState({ value: '', error: '' })
     const [password, setPassword] = useState({ value: '', error: '' })
-
+    const location = useLocation()
+    const from = location.state?.from?.pathname || "/";
+    
     const handleEmail = (email) => {
         if (/^\S+@\S+\.\S+$/.test(email)) {
             setEmail({ value: email, error: '' })
@@ -42,7 +44,7 @@ const Login = () => {
             signInWithEmailAndPassword(auth, email.value, password.value)
                 .then(() => {
                     toast.success('Login Successful', { id: 'login' })
-                    navigate('/')
+                    navigate(from, { replace: true });
 
                 })
                 .catch(() => {
@@ -82,7 +84,7 @@ const Login = () => {
                 </div>
                 <div className="icons">
                     <FcGoogle onClick={signInGoogle} className='google-icon' />
-                    <BsGithub onClick={signGithub} className='github-icon' />
+                   
                 </div>
 
 
