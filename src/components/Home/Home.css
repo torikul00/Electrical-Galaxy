@@ -63,6 +63,7 @@
     box-shadow: 8px 6px 16px -2px rgba(0, 0, 0, 0.178);
     transition: 0.5s;
 }
+
 .project-info:hover {
     transform: scale(1.05);
     -webkit-box-shadow: 8px 6px 16px -2px rgba(0, 0, 0, 0.48);
@@ -77,18 +78,11 @@
     cursor: default;
 }
 
-
-
-
-
-
-
 /* reaponsive for  mobile device */
 @media only screen and (max-width: 600px) {
     .header-container {
         flex-direction: column-reverse;
         padding: 20px;
-
     }
 
     .services-container {
@@ -100,14 +94,17 @@
         font-size: 30px;
         line-height: 40px;
     }
+
     .project-info {
         flex-direction: column;
         height: auto;
     }
-    .single-info{
+
+    .single-info {
         margin: 20px 0px;
     }
-    .single-info h1{
+
+    .single-info h1 {
         font-size: 20px;
         padding: 5px;
     }

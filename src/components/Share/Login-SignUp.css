@@ -1,4 +1,3 @@
-
 .form-container {
     width: 100vw;
     height: calc(100vh - 60px);
@@ -6,20 +5,22 @@
     justify-content: center;
     margin-top: 50px;
 }
-form:hover{
+
+form:hover {
     transform: translateY(-15px);
     box-shadow: 3px 5px 19px -5px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 3px 5px 19px -5px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 3px 5px 19px -5px rgba(0, 0, 0, 0.75);
 }
 
-form{
+form {
     width: 400px;
     border: 1px solid #22577e;
     border-radius: 5px;
     padding: 15px 60px;
     transition: 0.5s;
 }
+
 .inputs input:not([type=checkbox]) {
     width: 100%;
     padding: 6px 6px;
@@ -27,27 +28,32 @@ form{
     border: 1.5px solid #22577e;
     border-radius: 5px;
 }
+
 form label {
     display: block;
 }
-.signup-link{
+
+.signup-link {
     text-align: center;
     margin: 20px 0px;
 }
+
 .signup-link a {
     text-decoration: none;
     color: #22577e;
 }
-.form-title{
+
+.form-title {
     text-align: center;
     color: #22577e;
     margin: 20px 0px;
-    
+
 }
-.button{
-    padding: 10px 30px ;
+
+.button {
+    padding: 10px 30px;
     border: none;
-    background:#3973bb;
+    background: #3973bb;
     width: 100%;
     color: white;
     border: none;
@@ -56,40 +62,45 @@ form label {
     cursor: pointer;
     font-size: 16px;
 }
-.forgot-password{
+
+.forgot-password {
     color: #22577e;
     letter-spacing: 1px;
     margin: 10px 0px;
     cursor: pointer;
 }
+
 /* forgot css  */
-.forgot-pass-container{
+.forgot-pass-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 400px;
 }
-.forgot-input{
+
+.forgot-input {
     width: 300px;
     height: 300px;
     background-color: #22577e;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px ;
+    padding: 20px;
     color: white;
     border-radius: 5px;
     flex-direction: column;
 }
+
 .forgot-input input {
     display: block;
-    padding: 5px 10px ;
+    padding: 5px 10px;
     width: 80%;
 
 }
-.forgot-input button{
-    padding: 8px 20px ;
+
+.forgot-input button {
+    padding: 8px 20px;
     border: 2px solid white;
     width: 60%;
     background-color: #22577e;
@@ -100,46 +111,55 @@ form label {
     cursor: pointer;
     font-size: 13px;
 }
-.horizontal{
+
+.horizontal {
     display: flex;
     align-items: center;
 
 }
+
 .horizontal p {
     padding: 0px 10px;
 }
-.error-message{
+
+.error-message {
     color: red;
     letter-spacing: 0.8px;
 }
-.line{
+
+.line {
     width: 50%;
     height: 1px;
-    background-color:#22577e ;
+    background-color: #22577e;
 }
-.icons{
+
+.icons {
     display: flex;
     width: 100%;
     height: auto;
     justify-content: space-evenly;
     padding: 15px 0px;
 }
-.google-icon{
+
+.google-icon {
     font-size: 40px;
     cursor: pointer;
 }
+
 .facebook-icon {
-    font-size: 40px;    
+    font-size: 40px;
     color: blue;
     cursor: pointer;
 }
-.github-icon{
+
+.github-icon {
     font-size: 40px;
     cursor: pointer;
 
 }
-@media only screen and (max-width: 600px){
- form{
-     border: none;
- }
+
+@media only screen and (max-width: 600px) {
+    form {
+        border: none;
+    }
 }

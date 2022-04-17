@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer>
             <h3>Copyright -Torikul Islam - &copy; {thisYear} </h3>
-            
+
         </footer>
     );
 };

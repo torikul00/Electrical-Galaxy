@@ -11,11 +11,9 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
-
     return (
         <div>
             <main>
-
                 <div className="header-container">
                     <div>
                         <h1 className='header-title'>WELCOME TO MY <br /> ELECTRICAL GALAXY !</h1>
@@ -35,20 +33,19 @@ const Home = () => {
 
                 <div className="project-info">
                     <div className='single-info'>
-                        <h1>Project Completed</h1>
+                        <h1>Projects Completed</h1>
                         <h1>89 +</h1>
-                  </div>
+                    </div>
                     <div className='single-info'>
-                        <h1>Official Certification</h1>
+                        <h1>Official Certifications</h1>
                         <h1>5 +</h1>
-                  </div>
+                    </div>
                     <div className='single-info'>
-                        <h1>Positive Review</h1>
+                        <h1>Positive Reviews</h1>
                         <h1>120 +</h1>
-                  </div>
+                    </div>
 
                 </div>
-                
             </main>
         </div>
     );

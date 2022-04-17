@@ -2,31 +2,30 @@ import { sendPasswordResetEmail } from 'firebase/auth';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 import auth from '../firebase.init';
-
 const ResetPassword = () => {
-    
+
     const [email, setEmail] = useState('')
 
     const handleResetPassword = () => {
         if (/^\S+@\S+\.\S+$/.test(email)) {
-            sendPasswordResetEmail(auth , email)
+            sendPasswordResetEmail(auth, email)
                 .then(() => {
-                    toast.success('Sent reset email',{id:'sentMail'})
+                    toast.success('Sent reset email', { id: 'sentMail' })
                     setEmail('')
-            })
-            .catch(() =>  toast.error('Make sure your email is registered',{id:'error7'}))
+                })
+                .catch(() => toast.error('Make sure your email is registered', { id: 'error7' }))
         }
         else {
-            toast.error('Please Check Your Email',{id:'error6'})
+            toast.error('Please Check Your Email', { id: 'error6' })
         }
     }
     return (
         <div className='forgot-pass-container'>
             <div className="forgot-input">
-                <input onBlur={(e) => setEmail(e.target.value)} type="email" placeholder='Enter your email'required />
+                <input onBlur={(e) => setEmail(e.target.value)} type="email" placeholder='Enter your email' required />
                 <button onClick={handleResetPassword}>Reset Password</button>
-      </div>
-        </div> 
+            </div>
+        </div>
     );
 };
 

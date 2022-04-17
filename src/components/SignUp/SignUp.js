@@ -27,17 +27,17 @@ const SignUp = () => {
         }
         if (email.value && password.value && confirmPassword.value) {
             // signup new user
-           
-                createUserWithEmailAndPassword(auth, email.value, password.value)
-                    .then(() => {
-                        emailVerification()
-                        
-                        navigate(from, { replace: true });
-                    })
 
-                    // error
-                    .catch(() => toast.error('Email Already Registered', { id: "test", duration: 3000, style: { backgroundColor: 'black', color: 'white', } }))
-            
+            createUserWithEmailAndPassword(auth, email.value, password.value)
+                .then(() => {
+                    emailVerification()
+
+                    navigate(from, { replace: true });
+                })
+
+                // error
+                .catch(() => toast.error('Email Already Registered', { id: "test", duration: 3000, style: { backgroundColor: 'black', color: 'white', } }))
+
         }
     }
     const emailVerification = () => {
@@ -90,7 +90,7 @@ const SignUp = () => {
 
 
 
-                        <input onBlur={(e) => handleConfirmPassword(e.target.value)} name='confirmPassword' type="password" placeholder='Confirm Password' required/> <br />
+                        <input onBlur={(e) => handleConfirmPassword(e.target.value)} name='confirmPassword' type="password" placeholder='Confirm Password' required /> <br />
                         {
                             confirmPassword?.error && <small style={{ color: 'red' }}>{confirmPassword.error}</small>
                         }
@@ -107,7 +107,7 @@ const SignUp = () => {
                     </div>
                     <div className="icons">
                         <FcGoogle className='google-icon' onClick={signInGoogle} />
-                        
+
                     </div>
                 </form>
 

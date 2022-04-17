@@ -16,7 +16,7 @@ const Login = () => {
     const [password, setPassword] = useState({ value: '', error: '' })
     const location = useLocation()
     const from = location.state?.from?.pathname || "/";
-    
+
     const handleEmail = (email) => {
         if (/^\S+@\S+\.\S+$/.test(email)) {
             setEmail({ value: email, error: '' })
@@ -50,8 +50,6 @@ const Login = () => {
                     toast.error('Invalid email or password', { id: 'error5' })
                 })
         }
-
-
     }
 
     return (
@@ -81,7 +79,7 @@ const Login = () => {
                 </div>
                 <div className="icons">
                     <FcGoogle onClick={signInGoogle} className='google-icon' />
-                   
+
                 </div>
 
 
