@@ -64,11 +64,11 @@ const Login = () => {
                     {
                         email?.error && <small className='error-message'>{email.error}</small>
                     }
-                    <input onBlur={(e) => handleEmail(e.target.value)} type="email" placeholder='Email' name='email' />
+                    <input onBlur={(e) => handleEmail(e.target.value)} type="email" placeholder='Email' name='email' required />
                     {
                         password?.error && <small className='error-message'>{password.error}</small>
                     }
-                    <input onBlur={(e) => handlePassword(e.target.value)} type="password" placeholder='Password' name='password' /> <br />
+                    <input onBlur={(e) => handlePassword(e.target.value)} type="password" placeholder='Password' name='password' required /> <br />
                     <p onClick={() => navigate('/resetPassword')} className='forgot-password'>Forgot Password ?</p>
                     <button type='submit' className='button'>Login</button>
                     <p className='signup-link'>New User ? <Link to="/signup">Sign Up </Link></p>

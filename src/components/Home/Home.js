@@ -20,7 +20,7 @@ const Home = () => {
                     <div>
                         <h1 className='header-title'>WELCOME TO MY <br /> ELECTRICAL GALAXY !</h1>
                         <p className='header-desc'>Live long and save electricity. Imagine your life without electricity. <br /> Save electricity, save money and save planet. <br /> Save today – Use tomorrow</p>
-                        <button onClick={()=>navigate('/signUp')} className='register-button'>REGISTER NOW</button>
+                        <button onClick={() => navigate('/signUp')} className='register-button'>REGISTER NOW</button>
                     </div>
                     <div>
                         <img className='header-image' src={HeaderImage} alt="" />
@@ -32,6 +32,8 @@ const Home = () => {
                         services.map(service => <ServiceCard key={service.id} service={service} />)
                     }
                 </div>
+
+                
 
             </main>
         </div>

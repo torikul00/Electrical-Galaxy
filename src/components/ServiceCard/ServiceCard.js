@@ -9,7 +9,7 @@ const ServiceCard = ({ service }) => {
         <div>
             <div className="card-info">
                 <img src={image} alt="" />
-                <h1>{title}</h1>
+                <h2>{title}</h2>
                 <p>{ desc}</p>
                 <h3> Service Charge : $ {price}</h3>
                 <button onClick={()=>navigate('/checkout')} className='checkout-button'>Checkout Service</button>

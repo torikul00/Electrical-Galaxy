@@ -20,7 +20,6 @@ function App() {
       <Toaster
         position="bottom-right"
         toastOptions={{
-          // Define default options
           duration: 5000,
           style: {
             background: '#000000',

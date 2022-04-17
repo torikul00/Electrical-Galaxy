@@ -1,0 +1,19 @@
+.profile-info {
+    width: 100%;
+    height: 100vh;
+    padding: 0px 200px;
+
+}
+.profile-info img {
+    width: 300px;
+    margin: 50px auto;
+    border-radius: 10px;
+    display: block;
+
+}
+.profile-info p {
+    border-radius: 4px;
+    margin: 10px 0px;
+    background-color: rgba(0, 0, 0, 0.13);
+    padding: 15px;
+}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './SignUp.css'
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import toast from 'react-hot-toast';
 import { FcGoogle } from 'react-icons/fc';
 import useSocialLogin from '../hooks/useSocialLogin';
@@ -30,14 +30,21 @@ const SignUp = () => {
            
                 createUserWithEmailAndPassword(auth, email.value, password.value)
                     .then(() => {
-                        toast.success('Thanks for SignUp', { id: "test", duration: 3000, })
+                        emailVerification()
+                        
                         navigate(from, { replace: true });
                     })
 
                     // error
                     .catch(() => toast.error('Email Already Registered', { id: "test", duration: 3000, style: { backgroundColor: 'black', color: 'white', } }))
-
+            
         }
+    }
+    const emailVerification = () => {
+
+        sendEmailVerification(auth.currentUser)
+            .then(() => toast.success('Email verification sent'))
+            .catch(() => toast.error('Something went wrong'))
     }
     const handleEmail = (email) => {
         if (/^\S+@\S+\.\S+$/.test(email)) {
@@ -73,17 +80,17 @@ const SignUp = () => {
                         {
                             email?.error && <small style={{ color: 'red' }}>{email.error}</small>
                         }
-                        <input onBlur={(e) => handleEmail(e.target.value)} name='email' type="email" placeholder='Email' />
+                        <input onBlur={(e) => handleEmail(e.target.value)} name='email' type="email" placeholder='Email' required />
 
 
                         {
                             password?.error && <small style={{ color: 'red' }}>{password.error}</small>
                         }
-                        <input onBlur={(e) => handlePassword(e.target.value)} name='password' type="password" placeholder='Password' />
+                        <input onBlur={(e) => handlePassword(e.target.value)} name='password' type="password" placeholder='Password' required />
 
 
 
-                        <input onBlur={(e) => handleConfirmPassword(e.target.value)} name='confirmPassword' type="password" placeholder='Confirm Password' /> <br />
+                        <input onBlur={(e) => handleConfirmPassword(e.target.value)} name='confirmPassword' type="password" placeholder='Confirm Password' required/> <br />
                         {
                             confirmPassword?.error && <small style={{ color: 'red' }}>{confirmPassword.error}</small>
                         }
