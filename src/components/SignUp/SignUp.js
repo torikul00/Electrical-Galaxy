@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './SignUp.css'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import toast from 'react-hot-toast';
 import { FcGoogle } from 'react-icons/fc';
-import { BsGithub } from 'react-icons/bs';
 import useSocialLogin from '../hooks/useSocialLogin';
 import auth from '../firebase.init';
 const SignUp = () => {
-    const { signInGoogle, signGithub } = useSocialLogin()
+    const { signInGoogle } = useSocialLogin()
     const [email, setEmail] = useState({ value: '', error: '' })
     const [password, setPassword] = useState({ value: '', error: '' })
     const [confirmPassword, setConfirmPassword] = useState({ value: '', error: '' })
-
+    const location = useLocation()
+    const from = location.state?.from?.pathname || "/";
+    const navigate = useNavigate()
 
 
 
@@ -28,7 +29,10 @@ const SignUp = () => {
             // signup new user
            
                 createUserWithEmailAndPassword(auth, email.value, password.value)
-                    .then(() => toast.success('Thanks for SignUp', { id: "test", duration: 3000, style: { backgroundColor: 'black', color: 'white', } }))
+                    .then(() => {
+                        toast.success('Thanks for SignUp', { id: "test", duration: 3000, })
+                        navigate(from, { replace: true });
+                    })
 
                     // error
                     .catch(() => toast.error('Email Already Registered', { id: "test", duration: 3000, style: { backgroundColor: 'black', color: 'white', } }))

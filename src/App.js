@@ -18,8 +18,15 @@ function App() {
   return (
     <div >
       <Toaster
-       position="bottom-right"
-        reverseOrder={false}
+        position="bottom-right"
+        toastOptions={{
+          // Define default options
+          duration: 5000,
+          style: {
+            background: '#000000',
+            color: '#fff',
+          }
+        }}
       />
       <Navbar />
       <Routes>

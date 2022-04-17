@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import '../Share/Login-SignUp.css'
 import { FcGoogle } from 'react-icons/fc';
-import { BsGithub } from 'react-icons/bs';
 import useSocialLogin from '../hooks/useSocialLogin';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import toast from 'react-hot-toast';
@@ -11,7 +10,7 @@ import auth from '../firebase.init';
 
 
 const Login = () => {
-    const { signGithub, signInGoogle } = useSocialLogin()
+    const { signInGoogle } = useSocialLogin()
     const navigate = useNavigate()
     const [email, setEmail] = useState({ value: '', error: '' })
     const [password, setPassword] = useState({ value: '', error: '' })

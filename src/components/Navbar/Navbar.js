@@ -11,7 +11,7 @@ const Navbar = () => {
         onAuthStateChanged(auth, user => {
             if (user) {
                 setUser(user)
-                navigate('/')
+               
             }
             else {
                 setUser({})
