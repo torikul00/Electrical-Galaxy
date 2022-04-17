@@ -33,8 +33,22 @@ const Home = () => {
                     }
                 </div>
 
-                
+                <div className="project-info">
+                    <div className='single-info'>
+                        <h1>Project Completed</h1>
+                        <h1>89 +</h1>
+                  </div>
+                    <div className='single-info'>
+                        <h1>Official Certification</h1>
+                        <h1>5 +</h1>
+                  </div>
+                    <div className='single-info'>
+                        <h1>Positive Review</h1>
+                        <h1>120 +</h1>
+                  </div>
 
+                </div>
+                
             </main>
         </div>
     );

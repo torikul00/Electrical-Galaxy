@@ -94,8 +94,6 @@ const SignUp = () => {
                         {
                             confirmPassword?.error && <small style={{ color: 'red' }}>{confirmPassword.error}</small>
                         }
-                       
-
 
                         <input type='submit' className='button' value='Sign Up' />
                         <p className='signup-link'>Already Registered ? <Link to="/login">Login </Link></p>

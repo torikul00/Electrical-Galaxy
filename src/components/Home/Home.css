@@ -1,4 +1,4 @@
-.header-container{
+.header-container {
     width: 100%;
     height: calc(100vh - 60px);
     display: flex;
@@ -6,25 +6,30 @@
     align-items: center;
     padding: 0px 50px;
 }
-.header-title{
+
+.header-title {
     word-spacing: 10px;
     line-height: 50px;
     font-size: 45px;
     color: #3973bb;
 }
-.header-image{
+
+.header-image {
     width: 100%;
 }
-.service-title{
+
+.service-title {
     text-align: center;
     margin-top: 30px;
 }
-.header-desc{
+
+.header-desc {
     margin: 30px 0px;
     color: rgba(0, 0, 0, 0.719);
     font-size: 18px;
 }
-.register-button{
+
+.register-button {
     padding: 15px 40px;
     border: none;
     background-color: #3973bb;
@@ -35,25 +40,75 @@
     font-size: 20px;
     margin: 10px 0px;
 }
-.services-container{
+
+.services-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     padding: 40px 50px;
 }
+
+.faq-title {
+    text-align: center;
+}
+
+.project-info {
+    border: 2px solid rgba(0, 0, 0, 0.226);
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    -webkit-box-shadow: 8px 6px 16px -2px rgba(0, 0, 0, 0.185);
+    box-shadow: 8px 6px 16px -2px rgba(0, 0, 0, 0.178);
+    transition: 0.5s;
+}
+.project-info:hover {
+    transform: scale(1.05);
+    -webkit-box-shadow: 8px 6px 16px -2px rgba(0, 0, 0, 0.48);
+    box-shadow: 8px 6px 16px -2px rgba(0, 0, 0, 0.48);
+}
+
+
+.project-info h1 {
+    color: #3973bb;
+    text-align: center;
+    padding: 10px;
+    cursor: default;
+}
+
+
+
+
+
+
+
+/* reaponsive for  mobile device */
 @media only screen and (max-width: 600px) {
-   .header-container {
-       flex-direction: column-reverse;
-       padding: 20px;
-       
-   }
-   
-   .services-container{
-       grid-template-columns: repeat(1, 1fr);
-       padding: 30px 20px;
-   }
-   .header-title{
-       font-size: 30px;
-       line-height: 40px;
-   }
-  }
+    .header-container {
+        flex-direction: column-reverse;
+        padding: 20px;
+
+    }
+
+    .services-container {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 30px 20px;
+    }
+
+    .header-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .project-info {
+        flex-direction: column;
+        height: auto;
+    }
+    .single-info{
+        margin: 20px 0px;
+    }
+    .single-info h1{
+        font-size: 20px;
+        padding: 5px;
+    }
+}
